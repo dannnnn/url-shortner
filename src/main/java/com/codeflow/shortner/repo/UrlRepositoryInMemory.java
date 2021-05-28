@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class UrlRepositoryInMemory implements UrlRepository {
 
-    private Map<Long, String> inMemory = new ConcurrentHashMap<>();
+    private final Map<Long, String> inMemory = new ConcurrentHashMap<>();
 
     @Override
     public void saveUrl(Long id, String uniqueKey) {
